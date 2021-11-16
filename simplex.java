@@ -24,5 +24,14 @@ class Simplex{
 		System.out.print("\n\n");
 		//print matrix
 		methods.printMatrix(rows, colums, matrix);
+		
+		/*int menor=0;
+		for(int i=0; i < rows; i++){
+			if(rows[i] < menor){
+				menor = rows[i];
+			}
+		}
+		System.out.print("\nEl valor menor es: "+ menor);*/
+		
 	}
 }

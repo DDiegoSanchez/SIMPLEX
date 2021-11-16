@@ -21,12 +21,28 @@ public static void printMatrix(int colums, int rows,int matrix[][]){
 			}
 			else{
 				System.out.print("Z");
+
 			}
 			for(int j=0; j<(colums+rows+1); j++){
 				System.out.print("\t" + matrix[i][j] + " ");
+				
 			}
 			System.out.print("\n");
+			
 		}
+		//Identify input column
+		int less=matrix[rows][colums];
+		int column=0;
+			for(int i=0; i < (rows+1); i++){
+				for(int j=0; j<(colums+rows+1);j++){
+					if(matrix[i][j] < less){
+						menor = matrix[i][j];
+						column = j;
+					}
+				}
+			}
+		System.out.print("\nThe lower value is: "+ less);
+		System.out.print("\nThe input column is: "+ column);
 }
 //class for enter data
 public static int leeInt( String message) throws IOException {
