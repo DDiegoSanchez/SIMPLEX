@@ -8,7 +8,7 @@
 //Class to print the array
 public class Matrix {
 
-    public static void printMatrix2(int colums,int rows,int matrix[][]){
+    public static void printMatrix(int colums,int rows,int matrix[][]){
 		//Print slack variables
         System.out.print("SV");
         //Print variables X
@@ -37,6 +37,7 @@ public class Matrix {
 			}
 		}
 
+        //Create vector of result column
 		for(int i=0; i<rows; i++){
 			for(int j=0; j<=rows; j++){
 				if (j==rows){
@@ -70,9 +71,13 @@ public class Matrix {
         System.out.print("\n"); 
         
         //Print input column
-        /*for(int i=0; i<matrix.length; i++){
-            double div = matrix[i][column] / vector[i];
-            System.out.print("\n" +  div);
-        }*/
+        for(int i=0; i<matrix.length; i++){
+            System.out.print("\n" + matrix[i][column] );
+        }
+
+        System.out.print("\n");
+        //Print vector result
+         
+			
     } 
 }

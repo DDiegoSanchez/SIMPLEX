@@ -17,7 +17,6 @@ class Simplex{
 		int model[][];
 		int opc=0;
 		model = new int[rows][rows+1];
-		matrix = new int[rows+1][colums+rows+1];
 
 		do{
 			opc=0;
@@ -29,21 +28,33 @@ class Simplex{
 			}
 			switch(opc){
 				case 1:
+				//number of variables of the mathematical model
 				rows = EnterData.readInt("Variables: ");
 				model = new int[rows][rows+1];
+				System.out.print("\n");
+
+				//Enter values of equations
 				for(int i=0; i<rows; i++){
 					System.out.println("Equation: "+ (i+1));
 					for(int j=0; j<=rows; j++){
 						if(j== rows){
-							System.out.print("Result "+ (i+1)+":\t");
+
+							//Data of variables result
+							System.out.print("Result "+ (i+1)+": ");
 						}
 						else{
-							System.out.print("X"+ (j+1)+":\t");
+
+							//Data of variables X
+							System.out.print("X"+ (j+1)+":\t  ");
 						}
+
+						//Enter data
 						model[i][j] = EnterData.readInt("");
 					}
+					System.out.print("\n");
 				}
 				
+				//Print mathematical model
 				mathematicalModel.printMatrix(rows,model);
 					
 				break;
@@ -64,14 +75,13 @@ class Simplex{
 
 					System.out.print("\n\n");
 					//Print matrix with the class Mtarix
-					Matrix.printMatrix2(rows, colums, matrix);
+					Matrix.printMatrix(rows, colums, matrix);
 				break;
 				case 3:
+					//Print information about 
 					Information.Infromation();
 				break;
 			}
 		}while (opc != menu.length - 1);
-		
-		
 	}
 }
