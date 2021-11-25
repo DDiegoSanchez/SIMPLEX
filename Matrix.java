@@ -7,10 +7,10 @@
 
 //Class to print the array
 public class Matrix {
-    public static void printMatrix(int colums, int rows,int matrix[][]){
-        //Print slack variables
-        System.out.print("SV");
 
+    public static void printMatrix2(int colums,int rows,int matrix[][]){
+		//Print slack variables
+        System.out.print("SV");
         //Print variables X
         for(int j=0; j<(colums+rows+1); j++){
             if(j<(colums)){
@@ -18,8 +18,8 @@ public class Matrix {
            }
        }
 
-        //Print restrictions S
-        for(int j=0; j<(colums+rows+1); j++){
+       //Print restrictions S
+       for(int j=0; j<(colums+rows+1); j++){
             if(j<(rows)){
                 System.out.print("\tS" + (j+1));
             }
@@ -28,22 +28,32 @@ public class Matrix {
         //Result column
         System.out.print("\tResult");
         System.out.print("\n");
-        for(int i=0; i<(rows+1); i++){
-            if(i<rows){
-                System.out.print("S" + (i+1));
-            }
-            else{
-                //Objective Function
-                System.out.print("Z");
-            }
+		int ecu[][] = new int[rows][rows];
+		int vector[] = new int [rows];
+		for(int i=0; i<rows; i++){
             
-            //For to create the matrix
-            for(int j=0; j<(colums+rows+1); j++){
-                System.out.print("\t" + matrix[i][j] + " ");
-            }
+			for(int j=0; j<rows; j++){
+				ecu[i][j] = matrix[i][j];
+			}
+		}
 
-        System.out.print("\n");  
-        }
+		for(int i=0; i<rows; i++){
+			for(int j=0; j<=rows; j++){
+				if (j==rows){
+					vector[i] = matrix[i][j];
+				}
+			}
+		}
+				
+		for (int i = 0; i < matrix.length; i++) { 
+		System.out.println();
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print("\t"+matrix[i][j]+" ");
+            }
+			System.out.print("\n");
+		}
+
+
         //Identify input column
         int less=matrix[rows][colums];
         int column=0;
@@ -60,14 +70,9 @@ public class Matrix {
         System.out.print("\n"); 
         
         //Print input column
-        for(int i=0; i<matrix.length; i++){
-            System.out.print("\n" + matrix[i][column] + " ");
-        }
-        
-        //Column result
-        System.out.print("\n");
-        for(int z=0; z<((rows+colums)); z++){
-            System.out.print("\n" +matrix[z][(rows+colums)] + " ");
-        }
+        /*for(int i=0; i<matrix.length; i++){
+            double div = matrix[i][column] / vector[i];
+            System.out.print("\n" +  div);
+        }*/
     } 
 }

@@ -28,4 +28,14 @@ class EnterData{
 		}
 		return (number);      
 	}
+
+	//Method to print menu
+	public static void printMenu(String myArray []){
+		int x;
+		System.out.println("\t"+myArray[0]+"\n");
+		for(x=1 ; x <myArray.length ; x++ )
+		{
+			System.out.println(" " + x + ".-" + myArray[x]);
+		}
+	}
 }
