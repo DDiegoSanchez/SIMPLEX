@@ -9,7 +9,7 @@ import java.io.*;
 class Simplex{ 
 	public static void main(String args[]) throws IOException{
 		//Menu
-		String menu[] = {"\tSIMPLEX METHOD","Enter mathematical model","Create matrix","About","Exit"};
+		String menu[] = {"\tSIMPLEX METHOD","Enter mathematical model","Create matrix","User manual","About","Exit"};
 
 		//Declare variables for matrix
 		int rows=0, colums=0, data;
@@ -63,8 +63,9 @@ class Simplex{
 					rows = EnterData.readInt("Variables: ");
 					colums = EnterData.readInt("Restrictions: ");
 					matrix = new int[rows+1][colums+rows+1];
-
+					
 					//Enter the values of the matrix
+					System.out.print("Enter datas for rows\n");
 					for(int i=0; i<(rows+1); i++){
 						System.out.print("Enter data in row " + (i+1) + "\n");
 						for(int j=0; j<(colums+rows+1); j++){
@@ -78,6 +79,10 @@ class Simplex{
 					Matrix.printMatrix(rows, colums, matrix);
 				break;
 				case 3:
+					//Print user manual
+					Information.userManual();
+				break;
+				case 4:
 					//Print information about 
 					Information.Infromation();
 				break;

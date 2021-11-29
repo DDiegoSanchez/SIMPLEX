@@ -64,6 +64,8 @@ public class Matrix {
                 column = j;
             }
         }
+
+
         System.out.print("\n");
 
         System.out.print("\nThe lower value is: "+ less);
@@ -72,7 +74,7 @@ public class Matrix {
         
         //Print input column
         for(int i=0; i<matrix.length; i++){
-            System.out.print("\n" + matrix[i][column] );
+            System.out.print("\n" + matrix[i][column]);
         }
 
         System.out.print("\n");
