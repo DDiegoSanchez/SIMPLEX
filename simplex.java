@@ -29,6 +29,7 @@ class Simplex{
 			switch(opc){
 				case 1:
 				//number of variables of the mathematical model
+				System.out.print("\nIndicate the number of variables\n");
 				rows = EnterData.readInt("Variables: ");
 				model = new int[rows][rows+1];
 				System.out.print("\n");
@@ -55,11 +56,13 @@ class Simplex{
 				}
 				
 				//Print mathematical model
+				System.out.print("\nMathematical model\n");
 				mathematicalModel.printMatrix(rows,model);
 					
 				break;
 				case 2:
 					//Ask the number of columns and rows
+					System.out.print("\nIndicate the number of variables and restrictions\n");
 					rows = EnterData.readInt("Variables: ");
 					colums = EnterData.readInt("Restrictions: ");
 					matrix = new int[rows+1][colums+rows+1];
@@ -76,6 +79,7 @@ class Simplex{
 
 					System.out.print("\n\n");
 					//Print matrix with the class Mtarix
+					System.out.print("\nMathematical model standard form\n");
 					Matrix.printMatrix(rows, colums, matrix);
 				break;
 				case 3:

@@ -57,29 +57,17 @@ public class Matrix {
 
         //Identify input column
         int less=matrix[rows][colums];
-        int column=0;
-        for(int j=0;j<matrix[matrix.length-1].length;j++) {
+        int colum=0;
+        for(int j=0; j<matrix[matrix.length-1].length; j++) {
             if(matrix[matrix.length-1][j] < less){
                 less = matrix[matrix.length-1][j];
-                column = j;
+                colum = j;
             }
         }
 
-
         System.out.print("\n");
-
         System.out.print("\nThe lower value is: "+ less);
-        System.out.print("\nThe input column is: "+ column);
+        System.out.print("\nThe input column is: "+ colum);
         System.out.print("\n"); 
-        
-        //Print input column
-        for(int i=0; i<matrix.length; i++){
-            System.out.print("\n" + matrix[i][column]);
-        }
-
-        System.out.print("\n");
-        //Print vector result
-         
-			
     } 
 }

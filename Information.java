@@ -1,4 +1,5 @@
 public class Information {
+    //About program
     public static void Infromation(){
         System.out.println("\t About");
         System.out.println("\n\tAuthors\n");
@@ -7,9 +8,11 @@ public class Information {
         System.out.println("Lucia, javier.gandara04@gmail.com");
         System.out.println("Gustavo Javier, javier.gandara04@gmail.com");
 
-        System.out.println("\nRepository: https://github.com/DDiegoSanchez/SIMPLEX");
+        System.out.println("\nRepository: https://github.com/DDiegoSanchez/SIMPLEX\n");
+        System.out.println("Last modification 29/11/2021\n");
     }
 
+    //Instructions for use
     public static void userManual(){
         System.out.println("\n\t USER MANUAL");
         System.out.println("\nUser manual to be able to program to solve the simplex algorithm");
